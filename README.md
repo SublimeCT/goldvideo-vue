@@ -1,6 +1,8 @@
 # goldvideo-vue
 本项目是对 [goldvideo/h265player](https://github.com/goldvideo/h265player) 的简单封装
 
+⚠️ 正在开发中 ...
+
 ## usage
 > 请参考 [examples](https://github.com/SublimeCT/goldvideo-vue/blob/main/examples/App.tsx)
 
@@ -27,17 +29,17 @@ npm i git+ssh://git@github.com:SublimeCT/goldvideo-vue.git#v1
 
 3. 使用组件, [参考 App.tsx](https://github.com/SublimeCT/goldvideo-vue/blob/main/examples/App.tsx)
 
+```typescript
+import { H265Player } from 'goldvideo-vue'
+Vue.component(H265Player.name, H265Player)
+```
+
 ```tsx
 import { Component, Vue } from 'vue-property-decorator'
-import { H265Player } from '../src/main'
 // import LOGO from '../src/assets/logo.png'
 import { Sheets } from '@/components/H265Player/src/H265Player'
 
-@Component({
-    components: {
-        H265Player,
-    },
-})
+@Component
 export default class App extends Vue {
     static defaultURL = 'https://omc3i.codesandbox.io/ts/playlist.m3u8'
     url = '' // 输入框中的地址
@@ -85,7 +87,7 @@ export default class App extends Vue {
 [examples](https://github.com/SublimeCT/goldvideo-vue/blob/main/examples/App.tsx)
 
 ## Components
-### <h265-player>
+### `<h265-player>`
 [source](https://github.com/SublimeCT/goldvideo-vue/blob/main/src/components/H265Player/src/H265Player.tsx)
 
 ## refer
