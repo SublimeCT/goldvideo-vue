@@ -10,7 +10,7 @@ import { Sheets } from '@/components/H265Player/src/H265Player'
 })
 export default class App extends Vue {
     static defaultURL = 'https://omc3i.codesandbox.io/ts/playlist.m3u8'
-    url = 'http://192.168.1.28:10005/hls_h265/index.m3u8'
+    url = '' // 输入框中的地址
     options: GoldPlayOptions = {
         sourceURL: App.defaultURL,
         type: 'HLS',
@@ -40,7 +40,7 @@ export default class App extends Vue {
             <footer style="display: flex;justify-content: center;margin-top: 20px;">
                 <div>
                     <span>URL:</span>
-                    <input type="text" style="width: 500px;margin: 0 20px;" v-model={ this.url } />
+                    <input type="text" placeholder="please input video URL" style="width: 500px;margin: 0 20px;" v-model={ this.url } />
                     <button type="button" onClick={ evt => this.options.sourceURL = this.url }>update URL</button>
                 </div>
             </footer>

@@ -2,11 +2,17 @@
   "name": "goldvideo-vue",
   "version": "0.1.0",
   "private": false,
+  "main": "dist/GoldVideo.common.js",
+  "license": "ISC",
+  "files": [
+    "dist/GoldVideo.common.js",
+    "dist/GoldVideo.umd.min.js"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name GoldVideo ./src/index.ts"
+    "lib": "vue-cli-service build --target lib --name GoldVideo ./src/main.ts"
   },
   "dependencies": {
     "core-js": "^3.6.5",
