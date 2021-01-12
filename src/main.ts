@@ -1,8 +1,5 @@
-import Vue from 'vue'
-import App from './App.vue'
+import H265Player from './components/H265Player/src/H265Player'
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+export {
+    H265Player
+}

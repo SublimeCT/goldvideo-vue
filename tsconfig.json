@@ -4,6 +4,7 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -12,6 +13,10 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    // "typeRoots": [
+    //   "/@types",
+    //   "./node_modules/@types"
+    // ],
     "types": [
       "webpack-env"
     ],
@@ -31,10 +36,13 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "src/@types/*.d.ts",
+    "examples/**/*.ts",
+    "examples/**/*.tsx",
+    "examples/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "node_modules/vue-tsx-support/enable-check.d.ts",
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": []
 }

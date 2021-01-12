@@ -1,24 +1,6 @@
 # goldvideo-vue
+本项目是对 [goldvideo/h265player](https://github.com/goldvideo/h265player) 的简单封装
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## refer
+- [goldvideo/h265player](https://github.com/goldvideo/h265player)
+- [构建基于 TypeScript 的 Vue 组件](https://www.cnblogs.com/jiekzou/p/13424352.html?tvd)
