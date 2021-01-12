@@ -1,5 +1,5 @@
 // import { GoldPlay, GoldPlayOptions } from '../../../@types/GoldPlay'
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 
 export type Sheets = { [k: string]: string | undefined }
 
@@ -21,6 +21,11 @@ export default class H265Player extends Vue {
      */
     @Prop({ required: true })
     options!: GoldPlayOptions
+    @Watch('options.sourceURL')
+    onUpdateSourceURL() {
+        this.onDestroy()
+        this.init()
+    }
     player?: GoldPlay
     get _sheets(): Sheets {
         const sheets: Sheets = {

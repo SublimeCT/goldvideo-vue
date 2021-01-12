@@ -9,9 +9,10 @@ import { Sheets } from '@/components/H265Player/src/H265Player'
     },
 })
 export default class App extends Vue {
-    url = 'test url'
+    static defaultURL = 'https://omc3i.codesandbox.io/ts/playlist.m3u8'
+    url = 'http://192.168.1.28:10005/hls_h265/index.m3u8'
     options: GoldPlayOptions = {
-        sourceURL: 'http://192.168.1.28:10005/hls_h265/index.m3u8',
+        sourceURL: App.defaultURL,
         type: 'HLS',
         libPath: location.href + 'lib/',
     }
@@ -36,8 +37,12 @@ export default class App extends Vue {
                     onFirstLoaded={ this.onFirstLoaded }
                     debug={ true } />
             </main>
-            <footer style="display: flex;justify-content: center;">
-                <div>video url:{ this.options.sourceURL }</div>
+            <footer style="display: flex;justify-content: center;margin-top: 20px;">
+                <div>
+                    <span>URL:</span>
+                    <input type="text" style="width: 500px;margin: 0 20px;" v-model={ this.url } />
+                    <button type="button" onClick={ evt => this.options.sourceURL = this.url }>update URL</button>
+                </div>
             </footer>
         </div>
     }
