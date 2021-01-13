@@ -1,7 +1,7 @@
 # goldvideo-vue
 本项目是对 [goldvideo/h265player](https://github.com/goldvideo/h265player) 的简单封装
 
-⚠️ 正在开发中 ...
+⚠️ 暂未发布到 `npm`
 
 ## usage
 > 请参考 [examples](https://github.com/SublimeCT/goldvideo-vue/blob/main/examples/App.tsx)
@@ -31,7 +31,7 @@ npm i git+ssh://git@github.com:SublimeCT/goldvideo-vue.git#v1
 
 ```typescript
 import { H265Player } from 'goldvideo-vue'
-Vue.component(H265Player.name, H265Player)
+Vue.component('h265-player', H265Player)
 ```
 
 ```tsx
